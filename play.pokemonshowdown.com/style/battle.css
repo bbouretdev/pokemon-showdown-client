@@ -252,6 +252,8 @@ License: GPLv2
 .statbar span.psn,
 .statbar span.slp,
 .statbar span.par,
+.statbar span.ero,
+.statbar span.dis,
 .statbar span.frz {
 	padding: 1px 2px;
 	border: 0;
@@ -276,6 +278,14 @@ License: GPLv2
 .statbar span.frz {
 	background: #009AA4;
 	color: #FFFFFF;
+}
+.statbar span.ero {
+    background: #8e6842;
+    color: #FFFFFF;
+}
+.statbar span.dis {
+    background: #624b53;
+    color: #FFFFFF;
 }
 .statbar span.bad {
 	background: #FFE5E0;

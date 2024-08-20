@@ -2048,6 +2048,12 @@ export class Battle {
 			case 'frz':
 				this.scene.resultAnim(poke, 'Already frozen', 'neutral');
 				break;
+			case 'ern':
+				this.scene.resultAnim(poke, 'Already eroded', 'neutral');
+				break;
+			case 'drp':
+				this.scene.resultAnim(poke, 'Already disrupted', 'neutral');
+				break;
 			case 'unboost':
 				this.scene.resultAnim(poke, 'Stat drop blocked', 'neutral');
 				break;
