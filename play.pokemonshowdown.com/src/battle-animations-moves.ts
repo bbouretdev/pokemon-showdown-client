@@ -36586,3 +36586,7 @@ BattleMoveAnims['trailblaze'] = {anim: BattleMoveAnims['powerwhip'].anim};
 BattleMoveAnims['tripledive'] = {anim: BattleMoveAnims['dive'].anim};
 BattleMoveAnims['hydrosteam'] = {anim: BattleMoveAnims['steameruption'].anim};
 BattleMoveAnims['psyblade'] = {anim: BattleMoveAnims['psychocut'].anim};
+
+//DAV
+BattleMoveAnims['disrupt'] = {anim: BattleMoveAnims['psychic'].anim};
+BattleMoveAnims['erode'] = {anim: BattleMoveAnims['mudshot'].anim};
