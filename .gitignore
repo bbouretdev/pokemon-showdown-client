@@ -7,7 +7,7 @@ npm-debug.log
 /caches/
 config/config-example.js
 config/config.js
-# play.pokemonshowdown.com/testclient.html
+play.pokemonshowdown.com/testclient.html
 
 /play.pokemonshowdown.com/sprites/
 /play.pokemonshowdown.com/audio/
