@@ -36590,3 +36590,4 @@ BattleMoveAnims['psyblade'] = {anim: BattleMoveAnims['psychocut'].anim};
 //DAV
 BattleMoveAnims['disrupt'] = {anim: BattleMoveAnims['psychic'].anim};
 BattleMoveAnims['erode'] = {anim: BattleMoveAnims['mudshot'].anim};
+BattleMoveAnims['frostbite'] = {anim: BattleMoveAnims['freezedry'].anim};
