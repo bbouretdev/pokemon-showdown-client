@@ -766,6 +766,9 @@ class BattleTooltips {
 			if (move.flags.cannon && ability === 'gunner') {
 				text += `<p class="movetag">&#x2713; Cannon <small>(no accuracy check with Gunner)</small></p>`;
 			}
+			if (move.flags.punch && ability === 'lightningfists') {
+				text += `<p class="movetag">&#x2713; Fist <small>(increased priority with Lightning Fists)</small></p>`;
+			}
 		}
 		return text;
 	}

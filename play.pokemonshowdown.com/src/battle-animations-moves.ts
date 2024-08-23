@@ -9725,6 +9725,80 @@ export const BattleMoveAnims: AnimTable = {
 			}, 'swing');
 		},
 	},
+	featherpunch: {
+		anim(scene, [attacker, defender]) {
+			scene.showEffect('feather', {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0,
+				opacity: 1,
+				time: 400,
+			}, {
+				x: defender.leftof(-20),
+				y: defender.y,
+				z: defender.behind(20),
+				scale: 3,
+				opacity: 0,
+				time: 700,
+			}, 'linear');
+			scene.showEffect('feather', {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0,
+				opacity: 1,
+				time: 500,
+			}, {
+				x: defender.leftof(-20),
+				y: defender.y,
+				z: defender.behind(20),
+				scale: 3,
+				opacity: 0,
+				time: 800,
+			}, 'linear');
+			scene.showEffect('fist', {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 1,
+				opacity: 1,
+				time: 400,
+			}, {
+				x: defender.leftof(-20),
+				y: defender.y,
+				z: defender.behind(20),
+				scale: 2,
+				opacity: 0,
+				time: 800,
+			}, 'linear');
+			attacker.anim({
+				x: defender.leftof(20),
+				y: defender.y,
+				z: defender.behind(-20),
+				time: 400,
+			}, 'ballistic2Under');
+			attacker.anim({
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				time: 50,
+			});
+			attacker.anim({
+				time: 500,
+			}, 'ballistic2');
+			defender.delay(425);
+			defender.anim({
+				x: defender.leftof(-20),
+				y: defender.y,
+				z: defender.behind(20),
+				time: 50,
+			}, 'swing');
+			defender.anim({
+				time: 300,
+			}, 'swing');
+		},
+	},
 	thunderpunch: {
 		anim(scene, [attacker, defender]) {
 			scene.showEffect('electroball', {
