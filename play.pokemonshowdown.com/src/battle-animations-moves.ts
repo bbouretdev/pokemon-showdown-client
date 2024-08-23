@@ -36591,3 +36591,4 @@ BattleMoveAnims['psyblade'] = {anim: BattleMoveAnims['psychocut'].anim};
 BattleMoveAnims['disrupt'] = {anim: BattleMoveAnims['psychic'].anim};
 BattleMoveAnims['erode'] = {anim: BattleMoveAnims['mudshot'].anim};
 BattleMoveAnims['frostbite'] = {anim: BattleMoveAnims['freezedry'].anim};
+BattleMoveAnims['mysticshrapnel'] = {anim: BattleMoveAnims['flashcannon'].anim};
