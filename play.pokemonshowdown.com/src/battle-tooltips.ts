@@ -763,6 +763,9 @@ class BattleTooltips {
 			if (move.flags.wind) {
 				text += `<p class="movetag">&#x2713; Wind <small>(activates Wind Power and Wind Rider)</small></p>`;
 			}
+			if (move.flags.cannon && ability === 'gunner') {
+				text += `<p class="movetag">&#x2713; Cannon <small>(no accuracy check with Gunner)</small></p>`;
+			}
 		}
 		return text;
 	}

@@ -1202,6 +1202,10 @@ interface MoveFlags {
 	sound?: 1 | 0;
 	/** Activates the effects of the Wind Power and Wind Rider Abilities. */
 	wind?: 1 | 0;
+
+	// DAV
+	/** Accuracy is  ot checked when used by a Pokemon with the Gunner Ability */
+	cannon?: 1 | 0;
 }
 
 type MoveTarget = 'normal' | 'any' | 'adjacentAlly' | 'adjacentFoe' | 'adjacentAllyOrSelf' | // single-target
