@@ -769,6 +769,9 @@ class BattleTooltips {
 			if (move.flags.punch && ability === 'lightningfists') {
 				text += `<p class="movetag">&#x2713; Fist <small>(increased priority with Lightning Fists)</small></p>`;
 			}
+			if (move.flags.kick && ability === 'hamstring') {
+				text += `<p class="movetag">&#x2713; Kick <small>(lowers opponent's Speed 1 stage with Hamstring)</small></p>`;
+			}
 		}
 		return text;
 	}
