@@ -18,6 +18,7 @@ config/config.js
 /play.pokemonshowdown.com/preactalpha.html
 /play.pokemonshowdown.com/crossprotocol.html
 /play.pokemonshowdown.com/data/
+/test
 
 /play.pokemonshowdown.com/js/server/
 /play.pokemonshowdown.com/js/*.js.map
