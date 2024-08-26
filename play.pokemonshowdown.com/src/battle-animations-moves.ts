@@ -36666,3 +36666,6 @@ BattleMoveAnims['disrupt'] = {anim: BattleMoveAnims['psychic'].anim};
 BattleMoveAnims['erode'] = {anim: BattleMoveAnims['mudshot'].anim};
 BattleMoveAnims['frostbite'] = {anim: BattleMoveAnims['freezedry'].anim};
 BattleMoveAnims['mysticshrapnel'] = {anim: BattleMoveAnims['flashcannon'].anim};
+BattleMoveAnims['scorchrush'] = {anim: BattleMoveAnims['flamecharge'].anim};
+BattleMoveAnims['shatter'] = {anim: BattleMoveAnims['avalanche'].anim};
+BattleMoveAnims['paralash'] = {anim: BattleMoveAnims['electroball'].anim};
