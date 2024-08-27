@@ -1207,6 +1207,7 @@ interface MoveFlags {
 	/** Accuracy is  ot checked when used by a Pokemon with the Gunner Ability */
 	cannon?: 1 | 0;
 	kick?: 1 | 0;
+	pivot?: 1 | 0;
 }
 
 type MoveTarget = 'normal' | 'any' | 'adjacentAlly' | 'adjacentFoe' | 'adjacentAllyOrSelf' | // single-target

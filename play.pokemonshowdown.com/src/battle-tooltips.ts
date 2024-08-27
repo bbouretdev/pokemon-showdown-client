@@ -772,6 +772,9 @@ class BattleTooltips {
 			if (move.flags.kick && ability === 'hamstring') {
 				text += `<p class="movetag">&#x2713; Kick <small>(lowers opponent's Speed 1 stage with Hamstring)</small></p>`;
 			}
+			if (move.flags.pivot) {
+				text += `<p class="movetag">&#x2713; Pivot <small>(doesn't affect Slippy Skin pokemon)</small></p>`;
+			}
 		}
 		return text;
 	}
