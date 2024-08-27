@@ -1895,6 +1895,9 @@ export class PokemonSprite extends Sprite {
 		// Gen 1
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
+		// DAV
+		customvolatile: ['Custom Volatile', 'good'],
+		acidrain: ['Acidified', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
