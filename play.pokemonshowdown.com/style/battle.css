@@ -554,6 +554,17 @@ License: GPLv2
 	display: none;
 	position: absolute;
 }
+.sidecondition-coralreef {
+	display: none;
+	position: absolute;
+	background-image: url('https://client.showdowndav.dynv6.net/fx/shell.png');
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+	object-fit: cover;
+    object-position: center;
+
+}
 .sidecondition-lightscreen {
 	background: #CCCC00;
 	border: 1px solid #AAAA00;

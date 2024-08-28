@@ -2426,6 +2426,23 @@ export const BattleMoveAnims: AnimTable = {
 	reflect: {
 		anim() {},
 	},
+	coralreef: {
+		anim(scene, [attacker, defender]) {
+			scene.showEffect('shell', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 1.5,
+			}, {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 1.5,
+			}, 'ballistic');
+		},
+	},
 	safeguard: {
 		anim() {},
 	},
@@ -36463,7 +36480,7 @@ BattleMoveAnims['toxicthread'] = {anim: BattleMoveAnims['electroweb'].anim};
 
 BattleMoveAnims['hyperfang'] = {anim: BattleMoveAnims['superfang'].anim};
 
-BattleMoveAnims['barrage'] = {anim: BattleMoveAnims['magnetbomb'].anim};
+BattleMoveAnims['eggbarrage'] = {anim: BattleMoveAnims['magnetbomb'].anim};
 BattleMoveAnims['eggbomb'] = {anim: BattleMoveAnims['magnetbomb'].anim};
 BattleMoveAnims['spitup'] = {anim: BattleMoveAnims['magnetbomb'].anim};
 

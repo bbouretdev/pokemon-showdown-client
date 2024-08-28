@@ -1156,6 +1156,26 @@ export class BattleScene implements BattleSceneStub {
 				time: instant ? 0 : 300,
 			});
 			break;
+		case 'coralreef':
+			const coralreef = new Sprite(BattleEffects.coralreef, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-17),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.5,
+			}, this);
+			this.$spritesFront[spriteIndex].append(coralreef.$el!);
+			this.sideConditions[siden][id] = [coralreef];
+			coralreef.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
 		case 'safeguard':
 			const safeguard = new Sprite(BattleEffects.safeguard, {
 				display: 'block',
@@ -1895,6 +1915,7 @@ export class PokemonSprite extends Sprite {
 		// Gen 1
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
+		coralreef: ['Coral Reef', 'good'],
 		// DAV
 		customvolatile: ['Custom Volatile', 'good'],
 		acidrain: ['Acidified', 'bad'],
@@ -3157,6 +3178,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	reflect: {
 		rawHTML: '<div class="sidecondition-reflect" style="display:none;position:absolute" />',
 		w: 100, h: 50,
+	},
+	coralreef: {
+		rawHTML: '<div class="sidecondition-coralreef" style="display:none;position:absolute"/>',
+		w: 130, h: 60,
 	},
 	safeguard: {
 		rawHTML: '<div class="sidecondition-safeguard" style="display:none;position:absolute" />',
