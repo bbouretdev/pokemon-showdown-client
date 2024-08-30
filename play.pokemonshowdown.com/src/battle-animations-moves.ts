@@ -2426,6 +2426,9 @@ export const BattleMoveAnims: AnimTable = {
 	reflect: {
 		anim() {},
 	},
+	telekineticfield: {
+		anim() {},
+	},
 	coralreef: {
 		anim(scene, [attacker, defender]) {
 			scene.showEffect('shell', {
@@ -2625,6 +2628,9 @@ export const BattleMoveAnims: AnimTable = {
 		anim: BattleOtherAnims.selfstatus.anim,
 	},
 	magiccoat: {
+		anim: BattleOtherAnims.selfstatus.anim,
+	},
+	telekineticfield: {
 		anim: BattleOtherAnims.selfstatus.anim,
 	},
 	protect: {
@@ -36686,3 +36692,5 @@ BattleMoveAnims['mysticshrapnel'] = {anim: BattleMoveAnims['flashcannon'].anim};
 BattleMoveAnims['scorchrush'] = {anim: BattleMoveAnims['flamecharge'].anim};
 BattleMoveAnims['shatter'] = {anim: BattleMoveAnims['avalanche'].anim};
 BattleMoveAnims['paralash'] = {anim: BattleMoveAnims['electroball'].anim};
+BattleMoveAnims['muteblow'] = {anim: BattleMoveAnims['drainpunch'].anim};
+BattleMoveAnims['swiftfin'] = {anim: BattleMoveAnims['aquajet'].anim};

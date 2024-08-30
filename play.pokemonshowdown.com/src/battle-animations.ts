@@ -1176,6 +1176,26 @@ export class BattleScene implements BattleSceneStub {
 				time: instant ? 0 : 300,
 			});
 			break;
+			case 'telekineticfield':
+				const telekineticfield = new Sprite(BattleEffects.telekineticfield, {
+					display: 'block',
+					x,
+					y,
+					z: side.behind(-17),
+					xscale: 1,
+					yscale: 0,
+					opacity: 0.5,
+				}, this);
+				this.$spritesFront[spriteIndex].append(telekineticfield.$el!);
+				this.sideConditions[siden][id] = [telekineticfield];
+				telekineticfield.anim({
+					opacity: 0.7,
+					time: instant ? 0 : 400,
+				}).anim({
+					opacity: 0.3,
+					time: instant ? 0 : 300,
+				});
+				break;
 		case 'safeguard':
 			const safeguard = new Sprite(BattleEffects.safeguard, {
 				display: 'block',
@@ -1915,10 +1935,12 @@ export class PokemonSprite extends Sprite {
 		// Gen 1
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
-		coralreef: ['Coral Reef', 'good'],
 		// DAV
-		customvolatile: ['Custom Volatile', 'good'],
 		acidrain: ['Acidified', 'bad'],
+		electrodisable: ['Electro Disable', 'bad'],
+		muteblow: ['Muted', 'bad'],
+		coralreef: ['Coral Reef', 'good'],
+		telekineticfield: ['Telekinetic Field', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
@@ -3181,6 +3203,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	coralreef: {
 		rawHTML: '<div class="sidecondition-coralreef" style="display:none;position:absolute"/>',
+		w: 130, h: 60,
+	},
+	telekineticfield: {
+		rawHTML: '<div class="sidecondition-telekineticfield" style="display:none;position:absolute"/>',
 		w: 130, h: 60,
 	},
 	safeguard: {

@@ -554,6 +554,12 @@ License: GPLv2
 	display: none;
 	position: absolute;
 }
+.sidecondition-telekineticfield {
+	background: #EEEEEE;
+	border: 1px solid #888888;
+	display: none;
+	position: absolute;
+}
 .sidecondition-coralreef {
 	display: none;
 	position: absolute;
