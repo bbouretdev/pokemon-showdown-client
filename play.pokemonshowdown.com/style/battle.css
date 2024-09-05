@@ -571,6 +571,39 @@ License: GPLv2
     object-position: center;
 
 }
+.sidecondition-icerink {
+	display: none;
+	position: absolute;
+	background-image: url('https://client.showdowndav.dynv6.net/fx/icicle.png');
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+	object-fit: cover;
+    object-position: center;
+
+}
+.sidecondition-soothingsong {
+	display: none;
+	position: absolute;
+	background-image: url('https://client.showdowndav.dynv6.net/fx/musicnote.png');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	object-fit: cover;
+    object-position: center;
+
+}
+.sidecondition-sanddyke {
+	display: none;
+	position: absolute;
+	background-image: url('https://client.showdowndav.dynv6.net/fx/mudwisp.png');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	object-fit: cover;
+    object-position: center;
+
+}
 .sidecondition-lightscreen {
 	background: #CCCC00;
 	border: 1px solid #AAAA00;

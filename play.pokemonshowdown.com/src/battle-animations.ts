@@ -1176,26 +1176,86 @@ export class BattleScene implements BattleSceneStub {
 				time: instant ? 0 : 300,
 			});
 			break;
-			case 'telekineticfield':
-				const telekineticfield = new Sprite(BattleEffects.telekineticfield, {
-					display: 'block',
-					x,
-					y,
-					z: side.behind(-17),
-					xscale: 1,
-					yscale: 0,
-					opacity: 0.5,
-				}, this);
-				this.$spritesFront[spriteIndex].append(telekineticfield.$el!);
-				this.sideConditions[siden][id] = [telekineticfield];
-				telekineticfield.anim({
-					opacity: 0.7,
-					time: instant ? 0 : 400,
-				}).anim({
-					opacity: 0.3,
-					time: instant ? 0 : 300,
-				});
-				break;
+		case 'icerink':
+			const icerink = new Sprite(BattleEffects.icerink, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-17),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.5,
+			}, this);
+			this.$spritesFront[spriteIndex].append(icerink.$el!);
+			this.sideConditions[siden][id] = [icerink];
+			icerink.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
+		case 'soothingsong':
+			const soothingsong = new Sprite(BattleEffects.soothingsong, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-17),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.5,
+			}, this);
+			this.$spritesFront[spriteIndex].append(soothingsong.$el!);
+			this.sideConditions[siden][id] = [soothingsong];
+			soothingsong.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
+		case 'sanddyke':
+			const sanddyke = new Sprite(BattleEffects.sanddyke, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-17),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.5,
+			}, this);
+			this.$spritesFront[spriteIndex].append(sanddyke.$el!);
+			this.sideConditions[siden][id] = [sanddyke];
+			sanddyke.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
+		case 'telekineticfield':
+			const telekineticfield = new Sprite(BattleEffects.telekineticfield, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-17),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.5,
+			}, this);
+			this.$spritesFront[spriteIndex].append(telekineticfield.$el!);
+			this.sideConditions[siden][id] = [telekineticfield];
+			telekineticfield.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
 		case 'safeguard':
 			const safeguard = new Sprite(BattleEffects.safeguard, {
 				display: 'block',
@@ -1940,6 +2000,9 @@ export class PokemonSprite extends Sprite {
 		electrodisable: ['Electro Disable', 'bad'],
 		muteblow: ['Muted', 'bad'],
 		coralreef: ['Coral Reef', 'good'],
+		icerink: ['Coral Reef', 'good'],
+		soothingsong: ['Soothing Song', 'good'],
+		sanddyke: ['Sand Dyke', 'good'],
 		telekineticfield: ['Telekinetic Field', 'good'],
 	};
 	forme = '';
@@ -3203,6 +3266,18 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	coralreef: {
 		rawHTML: '<div class="sidecondition-coralreef" style="display:none;position:absolute"/>',
+		w: 130, h: 60,
+	},
+	icerink: {
+		rawHTML: '<div class="sidecondition-icerink" style="display:none;position:absolute"/>',
+		w: 130, h: 60,
+	},
+	soothingsong: {
+		rawHTML: '<div class="sidecondition-soothingsong" style="display:none;position:absolute"/>',
+		w: 130, h: 60,
+	},
+	sanddyke: {
+		rawHTML: '<div class="sidecondition-sanddyke" style="display:none;position:absolute"/>',
 		w: 130, h: 60,
 	},
 	telekineticfield: {

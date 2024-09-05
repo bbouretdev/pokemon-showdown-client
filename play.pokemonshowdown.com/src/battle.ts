@@ -694,6 +694,15 @@ export class Side {
 		case 'coralreef':
 			this.sideConditions[condition] = [effect.name, 1, 5, this.battle.gen >= 4 ? 8 : 0];
 			break;
+		case 'icerink':
+			this.sideConditions[condition] = [effect.name, 1, 5, this.battle.gen >= 4 ? 8 : 0];
+			break;
+		case 'soothingsong':
+			this.sideConditions[condition] = [effect.name, 1, 5, this.battle.gen >= 4 ? 8 : 0];
+			break;
+		case 'sanddyke':
+			this.sideConditions[condition] = [effect.name, 1, 5, this.battle.gen >= 4 ? 8 : 0];
+			break;
 		case 'telekineticfield':
 			this.sideConditions[condition] = [effect.name, 1, 3, 0];
 			break;
@@ -1429,7 +1438,7 @@ export class Battle {
 	}
 	swapSideConditions() {
 		const sideConditions = [
-			'mist', 'lightscreen', 'reflect', 'coralreef', 'telekineticfield', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+			'mist', 'lightscreen', 'reflect', 'coralreef', 'icerink', 'soothingsong', 'sanddyke', 'telekineticfield', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
 		];
 		if (this.gameType === 'freeforall') {
 			// TODO: Add FFA support
@@ -3020,6 +3029,9 @@ export class Battle {
 			case 'auroraveil':
 			case 'reflect':
 			case 'coralreef':
+			case 'icerink':
+			case 'soothingsong':
+			case 'sanddyke':
 			case 'telekineticfield':
 			case 'lightscreen':
 			case 'safeguard':
