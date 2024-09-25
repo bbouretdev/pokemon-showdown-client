@@ -1359,6 +1359,19 @@ export class BattleScene implements BattleSceneStub {
 			this.$spritesFront[spriteIndex].append(rock4.$el!);
 			this.sideConditions[siden][id] = [rock1, rock2, rock3, rock4];
 			break;
+		case 'netherward':
+			const psyward = new Sprite(BattleEffects.psyward, {
+				display: 'block',
+				x: x + side.leftof(-35),
+				y: y - 25,
+				z: side.z,
+				opacity: 0.7,
+				scale: 1.5,
+			}, this);
+
+			this.$spritesFront[spriteIndex].append(psyward.$el!);
+			this.sideConditions[siden][id] = [psyward];
+			break;
 		case 'gmaxsteelsurge':
 			const surge1 = new Sprite(BattleEffects.greenmetal1, {
 				display: 'block',
@@ -2004,6 +2017,7 @@ export class PokemonSprite extends Sprite {
 		soothingsong: ['Soothing Song', 'good'],
 		sanddyke: ['Sand Dyke', 'good'],
 		telekineticfield: ['Telekinetic Field', 'good'],
+		netherward: ['Nether Ward', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
@@ -3203,6 +3217,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	impact: {
 		url: 'impact.png', // by Pokemon Showdown user SailorCosmos
 		w: 127, h: 119,
+	},
+	psyward: {
+		url: 'psyward.png', // by Pokemon Showdown user SailorCosmos
+		w: 30, h: 30,
 	},
 	stare: {
 		url: 'stare.png',

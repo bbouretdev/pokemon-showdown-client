@@ -722,6 +722,7 @@ export class Side {
 			this.sideConditions[condition] = [effect.name, 1, 5, 0];
 			break;
 		case 'stealthrock':
+		case 'netherward':
 		case 'spikes':
 		case 'toxicspikes':
 		case 'stickyweb':
