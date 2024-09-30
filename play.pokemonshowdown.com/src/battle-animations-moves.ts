@@ -36964,3 +36964,4 @@ BattleMoveAnims['dreambreaker'] = {anim: BattleMoveAnims['psychic'].anim};
 BattleMoveAnims['lightball'] = {anim: BattleMoveAnims['zapcannon'].anim};
 BattleMoveAnims['dangerzone'] = {anim: BattleMoveAnims['smackdown'].anim};
 BattleMoveAnims['mentaldrop'] = {anim: BattleMoveAnims['telekinesis'].anim};
+BattleMoveAnims['trance'] = {anim: BattleMoveAnims['hypnosis'].anim};
