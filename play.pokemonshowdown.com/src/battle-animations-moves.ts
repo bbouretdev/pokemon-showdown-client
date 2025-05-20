@@ -674,6 +674,9 @@ export const BattleMoveAnims: AnimTable = {
 	hail: {
 		anim: BattleOtherAnims.dance.anim,
 	},
+	dusk: {
+		anim: BattleOtherAnims.dance.anim,
+	},
 	snowscape: {
 		anim: BattleOtherAnims.dance.anim,
 	},
@@ -2657,6 +2660,12 @@ export const BattleMoveAnims: AnimTable = {
 	spikyshield: {
 		anim: BattleOtherAnims.selfstatus.anim,
 	},
+	fieryaegis: {
+		anim: BattleOtherAnims.selfstatus.anim,
+	},
+	subzeroguard: {
+		anim: BattleOtherAnims.selfstatus.anim,
+	},
 	burningbulwark: {
 		anim: BattleOtherAnims.selfstatus.anim,
 	},
@@ -3295,6 +3304,22 @@ export const BattleMoveAnims: AnimTable = {
 	aquaring: {
 		anim(scene, [attacker]) {
 			scene.showEffect('iceball', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 2,
+				opacity: 0.2,
+				time: 0,
+			}, {
+				scale: 1.5,
+				opacity: 0.5,
+				time: 400,
+			}, 'linear', 'fade');
+		},
+	},
+	magmapool: {
+		anim(scene, [attacker]) {
+			scene.showEffect('flareball', {
 				x: attacker.x,
 				y: attacker.y,
 				z: attacker.z,
@@ -20293,6 +20318,65 @@ export const BattleMoveAnims: AnimTable = {
 			}, 'ballistic');
 		},
 	},
+	foggyember: {
+		anim(scene, [attacker, defender]) {
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 0.5,
+			}, {
+				x: defender.leftof(-40),
+				y: defender.y - 10,
+				z: defender.z,
+				scale: 0.2,
+				opacity: 1,
+			}, 'ballistic');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 0.5,
+				time: 75,
+			}, {
+				x: defender.leftof(-20),
+				y: defender.y - 40,
+				z: defender.z,
+				scale: 0.2,
+				opacity: 1,
+			}, 'ballistic');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 0.5,
+				time: 150,
+			}, {
+				x: defender.leftof(30),
+				y: defender.y - 20,
+				z: defender.z,
+				scale: 0.2,
+				opacity: 1,
+			}, 'ballistic');
+			scene.showEffect('blackwisp', {
+				x: attacker.x,
+				y: attacker.y,
+				z: attacker.z,
+				scale: 0.1,
+				opacity: 0.5,
+				time: 225,
+			}, {
+				x: defender.leftof(10),
+				y: defender.y - 30,
+				z: defender.z,
+				scale: 0.2,
+				opacity: 1,
+			}, 'ballistic');
+		},
+	},
 	gmaxsteelsurge: {
 		anim(scene, [attacker, defender]) {
 			scene.backgroundEffect('#000000', 1200, 0.3);
@@ -36965,3 +37049,10 @@ BattleMoveAnims['lightball'] = {anim: BattleMoveAnims['zapcannon'].anim};
 BattleMoveAnims['dangerzone'] = {anim: BattleMoveAnims['smackdown'].anim};
 BattleMoveAnims['mentaldrop'] = {anim: BattleMoveAnims['telekinesis'].anim};
 BattleMoveAnims['trance'] = {anim: BattleMoveAnims['hypnosis'].anim};
+BattleMoveAnims['noxiouschomp'] = {anim: BattleMoveAnims['poisonfang'].anim};
+BattleMoveAnims['puppettheft'] = {anim: BattleMoveAnims['trick'].anim};
+BattleMoveAnims['slothcurse'] = {anim: BattleMoveAnims['curse'].anim};
+BattleMoveAnims['provocativelaugh'] = {anim: BattleMoveAnims['meanlook'].anim};
+BattleMoveAnims['solarwind'] = {anim: BattleMoveAnims['heatwave'].anim};
+BattleMoveAnims['seaspray'] = {anim: BattleMoveAnims['watergun'].anim};
+BattleMoveAnims['mournfulhooting'] = {anim: BattleMoveAnims['screech'].anim};

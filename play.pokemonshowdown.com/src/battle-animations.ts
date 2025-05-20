@@ -956,6 +956,7 @@ export class BattleScene implements BattleSceneStub {
 				hail: 'Hail',
 				snow: 'Snow',
 				deltastream: 'Strong Winds',
+				dusk: 'Dusk',
 			};
 			weatherhtml = `${weatherNameTable[this.battle.weather] || this.battle.weather}`;
 			if (this.battle.weatherMinTimeLeft !== 0) {
@@ -1371,6 +1372,19 @@ export class BattleScene implements BattleSceneStub {
 
 			this.$spritesFront[spriteIndex].append(psyward.$el!);
 			this.sideConditions[siden][id] = [psyward];
+			break;
+		case 'foggyember':
+			const foggyember = new Sprite(BattleEffects.foggyember, {
+				display: 'block',
+				x: x + side.leftof(-35),
+				y: y - 25,
+				z: side.z,
+				opacity: 0.9,
+				scale: 0.5,
+			}, this);
+
+			this.$spritesFront[spriteIndex].append(foggyember.$el!);
+			this.sideConditions[siden][id] = [foggyember];
 			break;
 		case 'gmaxsteelsurge':
 			const surge1 = new Sprite(BattleEffects.greenmetal1, {
@@ -2018,6 +2032,9 @@ export class PokemonSprite extends Sprite {
 		sanddyke: ['Sand Dyke', 'good'],
 		telekineticfield: ['Telekinetic Field', 'good'],
 		netherward: ['Nether Ward', 'bad'],
+		foggyember: ['Ember Smoke', 'bad'],
+		slothcurse: ['Sloth Curse', 'bad'],
+		magnetized: ['Magnetized', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
@@ -3132,6 +3149,10 @@ const BattleEffects: {[k: string]: SpriteData} = {
 	},
 	mistball: {
 		url: 'mistball.png',
+		w: 100, h: 100,
+	},
+	foggyember: {
+		url: 'foggyember.png',
 		w: 100, h: 100,
 	},
 	iceball: {

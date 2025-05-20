@@ -723,6 +723,7 @@ export class Side {
 			break;
 		case 'stealthrock':
 		case 'netherward':
+		case 'foggyember':
 		case 'spikes':
 		case 'toxicspikes':
 		case 'stickyweb':
