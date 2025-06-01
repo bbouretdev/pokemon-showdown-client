@@ -1156,6 +1156,15 @@ class BattleTooltips {
 						speedModifiers.push(2);
 					}
 				}
+				if (weather === 'dusk') {
+					if (ability === 'duskrunner') {
+						speedModifiers.push(2);
+					}
+					if (ability === 'shadowhunter') {
+						stats.atk = Math.floor(stats.atk * 1.5);
+						stats.spa = Math.floor(stats.spa * 1.5);
+					}
+				}
 			}
 		}
 		if (ability === 'defeatist' && serverPokemon.hp <= serverPokemon.maxhp / 2) {

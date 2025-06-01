@@ -9680,6 +9680,52 @@ export const BattleMoveAnims: AnimTable = {
 			}, 'swing');
 		},
 	},
+	royalgambit: {
+		anim(scene, [attacker, defender]) {
+			scene.backgroundEffect('#987058', 400, 0.3);
+			scene.showEffect('waterwisp', {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0,
+				opacity: 0.5,
+				time: 300,
+			}, {
+				scale: 3,
+				opacity: 0,
+				time: 600,
+			}, 'linear');
+			scene.showEffect('waterwisp', {
+				x: defender.x,
+				y: defender.y,
+				z: defender.z,
+				scale: 0,
+				opacity: 0.5,
+				time: 500,
+			}, {
+				scale: 3,
+				opacity: 0,
+				time: 800,
+			}, 'linear');
+			attacker.anim({
+				x: defender.x,
+				y: defender.y,
+				z: defender.behind(-5),
+				time: 300,
+			}, 'accel');
+			attacker.anim({
+				time: 500,
+			}, 'ballistic2Back');
+			defender.delay(280);
+			defender.anim({
+				z: defender.behind(20),
+				time: 100,
+			}, 'swing');
+			defender.anim({
+				time: 300,
+			}, 'swing');
+		},
+	},
 	firepunch: {
 		anim(scene, [attacker, defender]) {
 			scene.showEffect('fireball', {
@@ -37056,3 +37102,7 @@ BattleMoveAnims['provocativelaugh'] = {anim: BattleMoveAnims['meanlook'].anim};
 BattleMoveAnims['solarwind'] = {anim: BattleMoveAnims['heatwave'].anim};
 BattleMoveAnims['seaspray'] = {anim: BattleMoveAnims['watergun'].anim};
 BattleMoveAnims['mournfulhooting'] = {anim: BattleMoveAnims['screech'].anim};
+BattleMoveAnims['unseenbone'] = {anim:BattleMoveAnims['bonemerang'].anim};
+BattleMoveAnims['sundance'] = {anim: BattleMoveAnims['doomdesire'].anim};
+BattleMoveAnims['stormdance'] = {anim: BattleMoveAnims['doomdesire'].anim};
+BattleMoveAnims['shadowdance'] = {anim: BattleMoveAnims['doomdesire'].anim};
